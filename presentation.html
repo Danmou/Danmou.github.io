@@ -217,7 +217,8 @@ columns {
 </ul>
 </div><p><span class="none"></span></p>
 <div style="display: inline-block; width: 100%; text-align: right"><p><video autoplay loop muted width="500" src="img/test_vid.mp4"></video></p>
-</div></div><p><span style="font-size: 80%;"><br />
+</div></div>
+<p><span style="font-size: 80%;"><br />
 [1]: <a href="https://aihabitat.org/">https://aihabitat.org/</a><br />
 </span></p>
 <footer>Daniel Mouritzen - Robotics and Perception Group</footer>
@@ -380,7 +381,7 @@ columns {
 }
 " data-marpit-pagination="14" data-marpit-pagination-total="22" style="--paginate:true;--background-color:white;--color:black;--footer:Daniel Mouritzen - Robotics and Perception Group;--theme:gaia;--heading-divider:2;color:black;background-color:white;background-image:none;--marpit-advanced-background-split:40%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
 <h2>Model-based RL</h2>
-<div style="column-count: 2; width: 100%"><div style="display: inline-block; width: 200%"><h3>PlaNet</h3>
+<h3>PlaNet</h3>
 <ul>
 <li data-marpit-fragment="1">Model operates in a (partially stochastic) latent space</li>
 <li data-marpit-fragment="2">Planning by optimizing predicted reward over fixed length action sequences</li>
@@ -410,12 +411,12 @@ columns {
 <li>Train actor-critic policy in model's imagination</li>
 </ul>
 <div style="text-align: center;"><p><img src="img/dreamer.png" alt="w:800px" style="width:800px;" /></p>
-</div></div><p><span style="font-size: 80%;"><br />
+</div><p><span style="font-size: 80%;"><br />
 D. Hafner et al. (2019): <em>Dream to Control: Learning Behaviors by Latent Imagination</em><br />
 </span></p>
 <footer>Daniel Mouritzen - Robotics and Perception Group</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-paginate="true" data-background-color="white" data-color="black" data-footer="Daniel Mouritzen - Robotics and Perception Group" data-theme="gaia" data-heading-divider="2" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-marpit-fragments="4" data-paginate="true" data-background-color="white" data-color="black" data-footer="Daniel Mouritzen - Robotics and Perception Group" data-theme="gaia" data-heading-divider="2" data-style="section {
   font-size: 24px;
 }
 header {
@@ -427,13 +428,15 @@ columns {
 " data-marpit-pagination="16" data-marpit-pagination-total="22" style="--paginate:true;--background-color:white;--color:black;--footer:Daniel Mouritzen - Robotics and Perception Group;--theme:gaia;--heading-divider:2;
 ;color:black;background-color:white;background-image:none;">
 <h2>My approach</h2>
-<p>TODO</p>
 <ul>
-<li>Assumptions/simplifications</li>
+<li data-marpit-fragment="1">PlaNet/Dreamer</li>
+<li data-marpit-fragment="2">Curriculum</li>
+<li data-marpit-fragment="3">Arbitrary sequence length</li>
+<li data-marpit-fragment="4">Success padding</li>
 </ul>
 <footer>Daniel Mouritzen - Robotics and Perception Group</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-paginate="true" data-background-color="white" data-color="black" data-footer="Daniel Mouritzen - Robotics and Perception Group" data-theme="gaia" data-heading-divider="2" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-marpit-fragments="10" data-paginate="true" data-background-color="white" data-color="black" data-footer="Daniel Mouritzen - Robotics and Perception Group" data-theme="gaia" data-heading-divider="2" data-style="section {
   font-size: 24px;
 }
 header {
@@ -445,13 +448,34 @@ columns {
 " data-marpit-pagination="17" data-marpit-pagination-total="22" style="--paginate:true;--background-color:white;--color:black;--footer:Daniel Mouritzen - Robotics and Perception Group;--theme:gaia;--heading-divider:2;
 ;color:black;background-color:white;background-image:none;">
 <h2>Reward functions</h2>
-<p>TODO</p>
 <ul>
-<li>Extremely important for the difficulty of the problem and the applicability of the results</li>
-<li>Often overlooked</li>
-<li>Sparse vs dense</li>
-<li>Geodesic distance</li>
-<li>Published results all use dense rewards</li>
+<li data-marpit-fragment="1">Sparse<br />
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mi>t</mi></msub><mo>=</mo><msub><mi>S</mi><mi>t</mi></msub><msub><mi>R</mi><mi>s</mi></msub><mo>+</mo><mi>λ</mi></mrow><annotation encoding="application/x-tex">r_t = S_t R_s + \lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">λ</span></span></span></span>
+<ul>
+<li data-marpit-fragment="2"><span style="color:red">Difficult</span></li>
+</ul>
+</li>
+<li data-marpit-fragment="3">Dense<br />
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mi>t</mi></msub><mo>=</mo><msub><mi>S</mi><mi>t</mi></msub><msub><mi>R</mi><mi>s</mi></msub><mo>+</mo><mrow><mo fence="true">(</mo><msub><mi>d</mi><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>−</mo><msub><mi>d</mi><mi>t</mi></msub><mo fence="true">)</mo></mrow><msub><mi>R</mi><mi>d</mi></msub><mo>+</mo><mi>λ</mi></mrow><annotation encoding="application/x-tex">r_t = S_t R_s + \left( d_{t-1} - d_t \right) R_d + \lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">(</span><span class="mord"><span class="mord mathdefault">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">t</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathdefault">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;">)</span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">λ</span></span></span></span>
+<ul>
+<li data-marpit-fragment="4">Most commonly used</li>
+<li data-marpit-fragment="5">Geodesic distance ⇒ <span style="color:red">simulation only!</span></li>
+</ul>
+</li>
+<li data-marpit-fragment="6">Collisions
+<ul>
+<li data-marpit-fragment="7"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mi>t</mi></msub><mo>=</mo><mo>⋯</mo><mo>−</mo><msub><mi>C</mi><mi>t</mi></msub><msub><mi>P</mi><mi>c</mi></msub></mrow><annotation encoding="application/x-tex">r_t = \cdots - C_t P_c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="minner">⋯</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>
+<ul>
+<li data-marpit-fragment="8">Can be implemented with a bumper switch</li>
+</ul>
+</li>
+<li data-marpit-fragment="9"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mi>t</mi></msub><mo>=</mo><mo>⋯</mo><mo>−</mo><msub><mi>C</mi><mi>t</mi></msub><msub><mi>P</mi><mi>c</mi></msub><mo>−</mo><mi>max</mi><mo>⁡</mo><mrow><mo fence="true">(</mo><mn>1</mn><mo>−</mo><mfrac><msub><mi>d</mi><mi>o</mi></msub><mi>τ</mi></mfrac><mo separator="true">,</mo><mn>0</mn><mo fence="true">)</mo></mrow><msub><mi>P</mi><mi>d</mi></msub></mrow><annotation encoding="application/x-tex">r_t = \cdots - C_t P_c - \max \left( 1 - \frac{d_o}{\tau}, 0 \right) P_d</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="minner">⋯</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2805559999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.2462179999999998em;vertical-align:-0.35001em;"></span><span class="mop">max</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size1">(</span></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8962079999999999em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.1132em;">τ</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.4101em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight">d</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.16454285714285719em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathdefault mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">0</span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size1">)</span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>
+<ul>
+<li data-marpit-fragment="10">Can be implemented with a laser scanner</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <footer>Daniel Mouritzen - Robotics and Perception Group</footer>
 </section>
@@ -480,10 +504,13 @@ columns {
 }
 " data-marpit-pagination="19" data-marpit-pagination-total="22" style="--paginate:true;--background-color:white;--color:black;--footer:Daniel Mouritzen - Robotics and Perception Group;--theme:gaia;--heading-divider:2;
 ;color:black;background-color:white;background-image:none;">
-<h2>Test conditions</h2>
+<h2>Results</h2>
 <p>TODO</p>
 <ul>
-<li>Max steps</li>
+<li>Plots comparing SPL, success, collisions and reward for PlaNet, (Hierarchical?), Dreamer, PPO, SLAM, random as a function of training data (with sparse and dense reward)</li>
+<li>Comparison of different horizon lengths with particle planner (to show that planning doesn't help)</li>
+<li>Performance vs distance</li>
+<li>Planning times</li>
 </ul>
 <footer>Daniel Mouritzen - Robotics and Perception Group</footer>
 </section>
@@ -498,17 +525,12 @@ columns {
 }
 " data-marpit-pagination="20" data-marpit-pagination-total="22" style="--paginate:true;--background-color:white;--color:black;--footer:Daniel Mouritzen - Robotics and Perception Group;--theme:gaia;--heading-divider:2;
 ;color:black;background-color:white;background-image:none;">
-<h2>Results</h2>
+<h2>Videos</h2>
 <p>TODO</p>
-<ul>
-<li>Plots comparing SPL, success, collisions and reward for PlaNet, (Hierarchical?), Dreamer, PPO, SLAM, random as a function of training data (with sparse and dense reward)</li>
-<li>Comparison of different horizon lengths with particle planner (to show that planning doesn't help)</li>
-<li>Performance vs distance</li>
-<li>Planning times</li>
-</ul>
+<center><video autoplay loop muted width="800" src="img/test_vid.mp4"></video></center>
 <footer>Daniel Mouritzen - Robotics and Perception Group</footer>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-paginate="true" data-background-color="white" data-color="black" data-footer="Daniel Mouritzen - Robotics and Perception Group" data-theme="gaia" data-heading-divider="2" data-style="section {
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-marpit-fragments="15" data-paginate="true" data-background-color="white" data-color="black" data-footer="Daniel Mouritzen - Robotics and Perception Group" data-theme="gaia" data-heading-divider="2" data-style="section {
   font-size: 24px;
 }
 header {
@@ -519,10 +541,42 @@ columns {
 }
 " data-marpit-pagination="21" data-marpit-pagination-total="22" style="--paginate:true;--background-color:white;--color:black;--footer:Daniel Mouritzen - Robotics and Perception Group;--theme:gaia;--heading-divider:2;
 ;color:black;background-color:white;background-image:none;">
-<h2>Videos</h2>
-<p>TODO</p>
-<center><video autoplay loop muted width="800" src="img/test_vid.mp4"></video></center>
-<footer>Daniel Mouritzen - Robotics and Perception Group</footer>
+<h1>Conclusion</h1>
+<div style="column-count: 2; width: 100%"><div style="display: inline-block; width: 100%"><h3>What did we learn?</h3>
+<ul>
+<li data-marpit-fragment="1">Model-based RL outperforms other methods
+<ul>
+<li data-marpit-fragment="2"><span style="color:green">Performance (SPL, collisions)</span></li>
+<li data-marpit-fragment="3"><span style="color:green">Sample efficiency</span></li>
+<li data-marpit-fragment="4"><span style="color:green">Sparse reward</span></li>
+</ul>
+</li>
+<li data-marpit-fragment="5">Curriculum learning can speed up training for navigation tasks</li>
+<li data-marpit-fragment="6">Planning with a learned model provides no benefit</li>
+<li data-marpit-fragment="7">Limitations
+<ul>
+<li data-marpit-fragment="8"><span style="color:red">Still far from human level</span></li>
+<li data-marpit-fragment="9"><span style="color:red">1M+ examples is still a lot</span></li>
+</ul>
+</li>
+</ul>
+</div><p><span class="none"></span></p>
+<div style="display: inline-block; width: 100%;"><h3>Where could we go now?</h3>
+<ul>
+<li data-marpit-fragment="10">Sim2real transfer
+<ul>
+<li data-marpit-fragment="11">Domain randomization, noise</li>
+</ul>
+</li>
+<li data-marpit-fragment="12">Initializing from &quot;expert&quot; demonstrations</li>
+<li data-marpit-fragment="13">Auxiliary goals to speed up learning
+<ul>
+<li data-marpit-fragment="14">Curiosity</li>
+<li data-marpit-fragment="15">Unsupervised depth (geometric priors)</li>
+</ul>
+</li>
+</ul>
+</div></div><footer>Daniel Mouritzen - Robotics and Perception Group</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-paginate="true" data-background-color="white" data-color="black" data-footer="Daniel Mouritzen - Robotics and Perception Group" data-theme="gaia" data-heading-divider="2" data-style="section {
   font-size: 24px;
@@ -536,19 +590,46 @@ columns {
 " data-marpit-pagination="22" data-marpit-pagination-total="22" style="--paginate:true;--background-color:white;--color:black;--footer:Daniel Mouritzen - Robotics and Perception Group;--theme:gaia;--heading-divider:2;
 ;color:black;background-color:white;background-image:none;">
 <h1>Conclusion</h1>
-<p>TODO</p>
+<div style="column-count: 2; width: 100%"><div style="display: inline-block; width: 100%"><h3>What did we learn?</h3>
 <ul>
-<li>Did we achieve the goal?</li>
-<li>What did we learn?</li>
-<li>Directions for future work:
+<li>Model-based RL outperforms other methods
 <ul>
-<li>Unsupervised depth as aux. learning signal</li>
-<li>Domain randomization for robustness</li>
-<li>Transfer to real domain</li>
+<li><span style="color:green">Performance (SPL, collisions)</span></li>
+<li><span style="color:green">Sample efficiency</span></li>
+<li><span style="color:green">Sparse reward</span></li>
+</ul>
+</li>
+<li>Curriculum learning can speed up training for navigation tasks</li>
+<li>Planning with a learned model provides no benefit</li>
+<li>Limitations
+<ul>
+<li><span style="color:red">Still far from human level</span></li>
+<li><span style="color:red">1M+ examples is still a lot</span></li>
 </ul>
 </li>
 </ul>
-</div><footer>Daniel Mouritzen - Robotics and Perception Group</footer>
+</div><p><span class="none"></span></p>
+<div style="display: inline-block; width: 100%;"><h3>Where could we go now?</h3>
+<ul>
+<li>Sim2real transfer
+<ul>
+<li>Domain randomization, noise</li>
+</ul>
+</li>
+<li>Initializing from &quot;expert&quot; demonstrations</li>
+<li>Auxiliary goals to speed up learning
+<ul>
+<li>Curiosity</li>
+<li>Unsupervised depth (geometric priors)</li>
+</ul>
+</li>
+</ul>
+<p> <br />
+ </p>
+<center>
+<p><span style="font-size: 200%;"><strong>Questions?</strong></span></p>
+</center>
+</div></div><footer>Daniel Mouritzen - Robotics and Perception Group</footer>
 </section>
 <script>!function(){"use strict";function t(t){Array.from(document.getElementsByTagName("svg"),e=>{if(e.hasAttribute("data-marpit-svg")){const{clientHeight:r,clientWidth:a}=e;e.style.transform||(e.style.transform="translateZ(0)");const o=t||e.currentScale||1,i=e.viewBox.baseVal.width/o,n=e.viewBox.baseVal.height/o,s=Math.min(r/n,a/i);Array.from(e.querySelectorAll(":scope > foreignObject"),t=>{const e=t.x.baseVal.value,o=t.y.baseVal.value;Array.from(t.querySelectorAll(":scope > section"),t=>{t.style.transformOrigin||(t.style.transformOrigin="0 0");const l=(a-s*i)/2-e,c=(r-s*n)/2-o;t.style.transform=`translate3d(${l}px,${c}px,0) scale(${s}) translate(${e}px,${o}px)`})})}})}const e=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};function r(a=!0){for(const e of"Apple Computer, Inc."===navigator.vendor?[t]:[])e();Array.from(document.querySelectorAll('svg[data-marp-fitting="svg"]'),t=>{const r=t.firstChild,a=r.firstChild,{scrollWidth:o,scrollHeight:i}=a;let n,s=1;if(t.hasAttribute("data-marp-fitting-code")&&(n=t.parentElement.parentElement),t.hasAttribute("data-marp-fitting-math")&&(n=t.parentElement),n){const t=getComputedStyle(n),e=Math.ceil(n.clientWidth-parseFloat(t.paddingLeft)-parseFloat(t.paddingRight));e&&(s=e)}const l=Math.max(o,s),c=Math.max(i,1),p=`0 0 ${l} ${c}`;e(r,"width",`${l}`),e(r,"height",`${c}`),e(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),e(t,"viewBox",p)&&t.classList.toggle("__reflow__")}),a&&window.requestAnimationFrame(()=>r(a))}!function(){if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");window.marpCoreBrowserScript?console.warn("Marp Core's browser script has already executed."):(Object.defineProperty(window,"marpCoreBrowserScript",{value:!0}),r())}()}();
 </script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="0" tabindex="0"><p># Test page
@@ -578,7 +659,7 @@ columns {
   - Require expensive sensors and lots of real-time computation
   - Lack robustness in complex environments</p></div><div class="bespoke-marp-note" data-index="3" tabindex="0"><p>The dream: We just have to tell the robot when it solved or failed the task, and then it can learn on its own.</p></div><div class="bespoke-marp-note" data-index="4" tabindex="0"><p>The dream: We just have to tell the robot when it solved or failed the task, and then it can learn on its own.</p></div><div class="bespoke-marp-note" data-index="5" tabindex="0"><p>Navigation is a skill, required for many tasks.</p></div><div class="bespoke-marp-note" data-index="6" tabindex="0"><p>- Navigate to a point given in relative coordinates from the agent's position
 - Many use RGBD input, but I want to use only RGB
-- If we can solve one task that requires navigation in a sufficiently general way, chances are that we can solve others using the same method.</p></div><div class="bespoke-marp-note" data-index="9" tabindex="0"><p>- Classical approach
+- If we can solve one task that requires navigation in a sufficiently general way, chances are that we can solve others using the same method.</p></div><div class="bespoke-marp-note" data-index="7" tabindex="0"><p>- Most straight-line episodes have been removed</p></div><div class="bespoke-marp-note" data-index="9" tabindex="0"><p>- Classical approach
 - If localization fails or the map becomes corrupted, planning won't work
 - Robustness: Featureless environments, moving obstacles</p></div><div class="bespoke-marp-note" data-index="10" tabindex="0"><p>- ~0.46 SPL with 75M interactions (PPO)
 - ~0.92 SPL with 2.5B interactions ([DD-PPO](https://arxiv.org/abs/1911.00357))
@@ -590,7 +671,12 @@ columns {
 ![bg right:40% fit](img/planet_planning.svg)</p></div><div class="bespoke-marp-note" data-index="14" tabindex="0"><p>- Extension of PlaNet
 - Released two months ago
 - Gradients can flow through the model, giving very efficient training
-- No planning iterations needed, so closed-loop is very fast</p></div><script>!function(){"use strict";var e=function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),s=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,(function(e){return"SCRIPT"!==e.nodeName})),o={},a=function(e,t){return(t=t||{}).index=s.indexOf(e),t.slide=e,t},i=function(e,t){o[e]=(o[e]||[]).filter((function(e){return e!==t}))},l=function(e,t){return(o[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},c=function(e,t){s[e]&&(n&&l("deactivate",a(n,t)),n=s[e],l("activate",a(n,t)))},d=function(e,t){var r=s.indexOf(n)+e;l(e>0?"next":"prev",a(n,t))&&c(r,t)},u={off:i,on:function(e,t){return(o[e]||(o[e]=[])).push(t),i.bind(null,e,t)},fire:l,slide:function(e,t){if(!arguments.length)return s.indexOf(n);l("slide",a(s[e],t))&&c(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:s,destroy:function(e){l("destroy",a(n,e)),o={}}};return(t||[]).forEach((function(e){e(u)})),n||c(0),u};function t(e){e.parent.classList.add("bespoke-marp-parent"),e.slides.map(e=>e.classList.add("bespoke-marp-slide")),e.on("activate",t=>{e.slides.map(e=>e.classList.remove("bespoke-marp-active")),t.slide.classList.add("bespoke-marp-active")})}function n(e=2e3){return t=>{let n;function r(){n&&clearTimeout(n),n=setTimeout(()=>{t.parent.classList.add("bespoke-marp-inactive")},e),t.parent.classList.remove("bespoke-marp-inactive")}document.addEventListener("mousedown",r),document.addEventListener("mousemove",r),document.addEventListener("touchend",r),setTimeout(r,0)}}const r=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"];function s(e){e.parent.addEventListener("keydown",e=>{if(!e.target)return;const t=e.target;(r.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()})}function o(e){window.addEventListener("load",()=>{for(const t of e.slides){const e=t.querySelector("[data-marp-fitting]")?"":"hideable";t.setAttribute("data-bespoke-marp-load",e)}})}function a(e){let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],s=(r,s)=>{t=r,n=s,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const o=t<r||t===r&&n<=s;e.setAttribute("data-bespoke-marp-fragment",o?"active":"inactive"),t===r&&n===s?e.setAttribute("data-bespoke-marp-current-fragment","current"):e.removeAttribute("data-bespoke-marp-current-fragment")})}),e.fragmentIndex=s;const o={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:s};e.fire("fragment",o)};e.on("next",()=>{if(r(1))return s(t,n+1),!1;const o=t+1;e.fragments[o]&&s(o,0)}),e.on("prev",()=>{if(r(-1))return s(t,n-1),!1;const o=t-1;e.fragments[o]&&s(o,e.fragments[o].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const s=e.fragments[t];if(s){const{length:e}=s;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}s(t,r)}),s(0,0)}var i,l=function(e,t){return e(t={exports:{}},t.exports),t.exports}((function(e){
+- No planning iterations needed, so closed-loop is very fast</p></div><div class="bespoke-marp-note" data-index="16" tabindex="0"><p>- Very important and often overlooked
+- Dense is used by all published results in Habitat
+- Collisions are very unrealistic in Habitat
+- Conflicting goals, at least initially</p></div><div class="bespoke-marp-note" data-index="21" tabindex="0"><p>- Outperforms in terms of performance and sample efficiency
+- 1M examples = 250 km
+- If the model was more accurate, it's possible that planning could be beneficial</p></div><script>!function(){"use strict";var e=function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),s=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,(function(e){return"SCRIPT"!==e.nodeName})),o={},a=function(e,t){return(t=t||{}).index=s.indexOf(e),t.slide=e,t},i=function(e,t){o[e]=(o[e]||[]).filter((function(e){return e!==t}))},l=function(e,t){return(o[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},c=function(e,t){s[e]&&(n&&l("deactivate",a(n,t)),n=s[e],l("activate",a(n,t)))},d=function(e,t){var r=s.indexOf(n)+e;l(e>0?"next":"prev",a(n,t))&&c(r,t)},u={off:i,on:function(e,t){return(o[e]||(o[e]=[])).push(t),i.bind(null,e,t)},fire:l,slide:function(e,t){if(!arguments.length)return s.indexOf(n);l("slide",a(s[e],t))&&c(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:s,destroy:function(e){l("destroy",a(n,e)),o={}}};return(t||[]).forEach((function(e){e(u)})),n||c(0),u};function t(e){e.parent.classList.add("bespoke-marp-parent"),e.slides.map(e=>e.classList.add("bespoke-marp-slide")),e.on("activate",t=>{e.slides.map(e=>e.classList.remove("bespoke-marp-active")),t.slide.classList.add("bespoke-marp-active")})}function n(e=2e3){return t=>{let n;function r(){n&&clearTimeout(n),n=setTimeout(()=>{t.parent.classList.add("bespoke-marp-inactive")},e),t.parent.classList.remove("bespoke-marp-inactive")}document.addEventListener("mousedown",r),document.addEventListener("mousemove",r),document.addEventListener("touchend",r),setTimeout(r,0)}}const r=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"];function s(e){e.parent.addEventListener("keydown",e=>{if(!e.target)return;const t=e.target;(r.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()})}function o(e){window.addEventListener("load",()=>{for(const t of e.slides){const e=t.querySelector("[data-marp-fitting]")?"":"hideable";t.setAttribute("data-bespoke-marp-load",e)}})}function a(e){let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],s=(r,s)=>{t=r,n=s,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const o=t<r||t===r&&n<=s;e.setAttribute("data-bespoke-marp-fragment",o?"active":"inactive"),t===r&&n===s?e.setAttribute("data-bespoke-marp-current-fragment","current"):e.removeAttribute("data-bespoke-marp-current-fragment")})}),e.fragmentIndex=s;const o={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:s};e.fire("fragment",o)};e.on("next",()=>{if(r(1))return s(t,n+1),!1;const o=t+1;e.fragments[o]&&s(o,0)}),e.on("prev",()=>{if(r(-1))return s(t,n-1),!1;const o=t-1;e.fragments[o]&&s(o,e.fragments[o].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const s=e.fragments[t];if(s){const{length:e}=s;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}s(t,r)}),s(0,0)}var i,l=function(e,t){return e(t={exports:{}},t.exports),t.exports}((function(e){
 /*!
   * screenfull
   * v5.0.0 - 2019-09-09
